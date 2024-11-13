@@ -9,5 +9,4 @@ typedef struct link
 } link;
 link* initL(int val);
 void printL(link* head);
-void freeL(link** head);
 #endif
