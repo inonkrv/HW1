@@ -37,6 +37,7 @@ void cleanStack(Stack* s)
 
 int pop(Stack* s)// Return -1 if stack is empty
 {
+	int save = s->head->value;
 	link* node = new link;
 	if (s->head == NULL)
 	{
@@ -52,7 +53,7 @@ int pop(Stack* s)// Return -1 if stack is empty
 		s->head = s->head->next;
 		delete node;
 	}
-	return 0;
+	return save;
 }
 void deleteAll(Stack* s)
 {
